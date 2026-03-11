@@ -1,32 +1,45 @@
 :root {
   /* Colors */
-  --color-bg: #fafafa;
-  --color-surface: #ffffff;
-  --color-surface-hover: #f3f4f6;
+  --color-bg: #f7f5f3; /* warm off-white */
+  --color-surface: #fdfcfb; /* soft white — cards, inputs, modals */
+  --color-surface-hover: #f0ece8; /* light warm grey — hover on surfaces */
 
-  --color-fg: #1f2937;
-  --color-muted: #6b7280;
-  --color-fg-disabled: #d1d5db;
+  --color-fg: #2d3a3a; /* dark teal-grey — primary text */
+  --color-fg-muted: #7a8f8f; /* dusty teal — secondary text, captions */
+  --color-fg-disabled: #b8c4c4; /* light teal-grey — disabled text */
+  --color-fg-inverse: #ffffff; /* pure white — text on colored buttons */
 
-  --color-border: #e5e7eb;
+  --color-border: #ddd8d2; /* warm grey — default borders */
+  --color-border-strong: #c9c2ba; /* darker warm grey — hover borders */
 
-  --color-primary: #3b82f6;
-  --color-primary-hover: #2563eb;
-  --color-danger: #ef4444;
-  --color-success: #22c55e;
-  --color-warning: #f59e0b;
+  --color-primary: #7c9ea6; /* dusty slate blue */
+  --color-primary-hover: #5f8a94; /* deeper slate blue */
+  --color-primary-subtle: #e8f0f2; /* pale blue tint — badges, alert bg */
 
-  --color-focus: #93c5fd;
+  --color-danger: #c4826e; /* muted terracotta */
+  --color-danger-hover: #ad6a56; /* deeper terracotta */
+  --color-danger-subtle: #f5e8e4; /* pale blush — danger alert bg */
+
+  --color-success: #8faa8b; /* dusty sage green */
+  --color-success-hover: #739470; /* deeper sage */
+  --color-success-subtle: #eaf2ea; /* pale mint — success alert bg */
+
+  --color-warning: #c9a96e; /* muted amber */
+  --color-warning-hover: #b08f52; /* deeper amber */
+  --color-warning-subtle: #f5eddf; /* pale sand — warning alert bg */
+
+  --color-focus: #7c9ea6; /* matches primary — keyboard focus ring */
 
   /* Radius */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px; /* pill shape */
 
   /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.12);
+  --shadow-sm: 0 1px 2px rgba(45, 58, 58, 0.06);
+  --shadow-md: 0 8px 20px rgba(45, 58, 58, 0.08);
+  --shadow-lg: 0 16px 32px rgba(45, 58, 58, 0.1);
 
   /* Motion */
   --motion-fast: 150ms ease;
@@ -34,7 +47,7 @@
   --motion-slow: 300ms ease;
   --motion-spring: 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
 
-  /** Spacing **/
+  /* Spacing */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -42,8 +55,10 @@
   --space-5: 20px;
   --space-6: 24px;
   --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
 
-  /** Fonts */
+  /* Fonts */
   --font-sans: 'Avenir', 'Avenir Next', 'Nunito', system-ui, sans-serif;
   --font-mono: 'IBM Plex Mono', 'Fira Code', monospace;
 
@@ -55,53 +70,74 @@
 }
 
 [data-theme='dark'] {
-  --color-bg: #111827;
-  --color-surface: #1f2937;
-  --color-surface-hover: #374151;
+  --color-bg: #1e2626; /* deep teal-black */
+  --color-surface: #252e2e; /* dark teal — cards, inputs */
+  --color-surface-hover: #2e3a3a; /* slightly lighter teal */
 
-  --color-fg: #f9fafb;
-  --color-fg-muted: #9ca3af;
-  --color-fg-disabled: #4b5563;
+  --color-fg: #e8e4e0; /* warm off-white — primary text */
+  --color-fg-muted: #8fa0a0; /* muted teal — secondary text */
+  --color-fg-disabled: #4a5a5a; /* dark teal-grey — disabled */
+  --color-fg-inverse: #ffffff; /* pure white */
 
-  --color-border: #374151;
+  --color-border: #334040; /* dark teal border */
+  --color-border-strong: #3f5050; /* stronger teal border */
 
-  --color-primary: #60a5fa;
-  --color-primary-hover: #3b82f6;
-  --color-danger: #f87171;
-  --color-danger-hover: #ef4444;
-  --color-success: #4ade80;
-  --color-warning: #fbbf24;
+  --color-primary: #8fb5be; /* lighter dusty blue */
+  --color-primary-hover: #7c9ea6; /* base dusty blue */
+  --color-primary-subtle: #1e3038; /* dark blue tint */
 
-  --color-focus: #3b82f6;
+  --color-danger: #d4967e; /* lighter terracotta */
+  --color-danger-hover: #c4826e; /* base terracotta */
+  --color-danger-subtle: #3a1f18; /* dark blush */
+
+  --color-success: #9eba9a; /* lighter sage */
+  --color-success-hover: #8faa8b; /* base sage */
+  --color-success-subtle: #1a2e1a; /* dark mint */
+
+  --color-warning: #d4b87e; /* lighter amber */
+  --color-warning-hover: #c9a96e; /* base amber */
+  --color-warning-subtle: #2e2410; /* dark sand */
+
+  --color-focus: #8fb5be; /* lighter blue for dark bg */
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.5);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
-    --color-bg: #111827;
-    --color-surface: #1f2937;
-    --color-surface-hover: #374151;
+    --color-bg: #1e2626;
+    --color-surface: #252e2e;
+    --color-surface-hover: #2e3a3a;
 
-    --color-fg: #f9fafb;
-    --color-fg-muted: #9ca3af;
-    --color-fg-disabled: #4b5563;
+    --color-fg: #e8e4e0;
+    --color-fg-muted: #8fa0a0;
+    --color-fg-disabled: #4a5a5a;
 
-    --color-border: #374151;
+    --color-border: #334040;
+    --color-border-strong: #3f5050;
 
-    --color-primary: #60a5fa;
-    --color-primary-hover: #3b82f6;
-    --color-danger: #f87171;
-    --color-danger-hover: #ef4444;
-    --color-success: #4ade80;
-    --color-warning: #fbbf24;
+    --color-primary: #8fb5be;
+    --color-primary-hover: #7c9ea6;
+    --color-primary-subtle: #1e3038;
 
-    --color-focus: #3b82f6;
+    --color-danger: #d4967e;
+    --color-danger-hover: #c4826e;
+    --color-danger-subtle: #3a1f18;
+
+    --color-success: #9eba9a;
+    --color-success-hover: #8faa8b;
+    --color-success-subtle: #1a2e1a;
+
+    --color-warning: #d4b87e;
+    --color-warning-hover: #c9a96e;
+    --color-warning-subtle: #2e2410;
+
+    --color-focus: #8fb5be;
 
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.4);
     --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.5);
   }
-}
+} */
